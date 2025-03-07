@@ -20,7 +20,7 @@ def add(numbers_str: str) -> int:
         if number == "":
             continue
         if int(number) < 0:
-            raise ValueError()
+            raise ValueError("negative numbers not allowed " + number)
         s += int(number)
 
     return s
