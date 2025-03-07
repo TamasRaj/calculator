@@ -3,5 +3,6 @@ def add(numbers_str: str) -> int:
         return 0
     if "," in numbers_str:
         numbers = numbers_str.split(",")
-        return sum([int(number) for number in numbers])
+        # Treat empty string to be 0 hence ignore
+        return sum([int(number) for number in numbers if number != ""])
     return int(numbers_str)
