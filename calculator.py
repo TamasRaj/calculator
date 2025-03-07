@@ -3,5 +3,5 @@ def add(numbers_str: str) -> int:
         return 0
     if "," in numbers_str:
         numbers = numbers_str.split(",")
-        return int(numbers[0]) + int(numbers[1])
+        return sum([int(number) for number in numbers])
     return int(numbers_str)
