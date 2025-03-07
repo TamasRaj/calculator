@@ -22,6 +22,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("10,20,30,30,45"), 135)
 
         self.assertEqual(calculator.add("1,2,3,4,"), 10)
+        self.assertEqual(calculator.add("5,7,9,,20"), 41)
+        self.assertEqual(calculator.add(",10,,20,30,30,45,"), 135)
 
 if __name__ == '__main__':
     unittest.main()
