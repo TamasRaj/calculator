@@ -4,7 +4,7 @@ def add(numbers_str: str) -> int:
 
     if "," not in numbers_str and "\n" not in numbers_str:
         if int(numbers_str) < 0:
-            raise ValueError()
+            raise ValueError("negative numbers not allowed " + numbers_str)
         return int(numbers_str)
     
     delimiter = ","
