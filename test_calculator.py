@@ -10,6 +10,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(""), 0)
         self.assertEqual(calculator.add("1"), 1)
         self.assertEqual(calculator.add("2"), 2)
+        self.assertEqual(calculator.add("10"), 10)
+        self.assertEqual(calculator.add("100"), 100)
 
 if __name__ == '__main__':
     unittest.main()
