@@ -41,6 +41,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("//%\n4"), 4)
 
         self.assertEqual(calculator.add("//;\n1;2"), 3)
+        self.assertEqual(calculator.add("//&\n5&7"), 12)
+        self.assertEqual(calculator.add("//&\n5&7\n20"), 32)
 
 if __name__ == '__main__':
     unittest.main()
