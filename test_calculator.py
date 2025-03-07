@@ -49,5 +49,9 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(ValueError, calculator.add, "1,-2")
         self.assertRaises(ValueError, calculator.add, "1,-2,3")
 
+        with self.assertRaises(ValueError) as context:
+            calculator.add("-1")
+        self.assertEqual(str(context.exception), "negative numbers not allowed -1")
+
 if __name__ == '__main__':
     unittest.main()
