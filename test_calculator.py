@@ -17,5 +17,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("5,7"), 12)
         self.assertEqual(calculator.add("10,20"), 30)
 
+        self.assertEqual(calculator.add("1,2,3"), 6)
+
 if __name__ == '__main__':
     unittest.main()
