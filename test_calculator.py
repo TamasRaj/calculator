@@ -45,6 +45,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("//&\n5&7\n20"), 32)
 
         self.assertRaises(ValueError, calculator.add, "-1")
+        self.assertRaises(ValueError, calculator.add, "-1,2")
+        self.assertRaises(ValueError, calculator.add, "1,-2")
+        self.assertRaises(ValueError, calculator.add, "1,-2,3")
 
 if __name__ == '__main__':
     unittest.main()
