@@ -1,6 +1,10 @@
 def add(numbers_str: str) -> int:
     if numbers_str == "":
         return 0
+    
+    if numbers_str.startswith("//"):
+        delimiter, numbers_str = numbers_str.split("\n", 1)
+        return int(numbers_str)
 
     if "," in numbers_str or "\n" in numbers_str:
         numbers_str = numbers_str.replace("\n", ",")
