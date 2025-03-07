@@ -16,11 +16,14 @@ def add(numbers_str: str) -> int:
     numbers = numbers_str.split(delimiter)
 
     s = 0
+    negative_numbers = []
     for number in numbers:
         if number == "":
             continue
         if int(number) < 0:
-            raise ValueError("negative numbers not allowed " + number)
+            negative_numbers.append(number)
         s += int(number)
-
+    
+    if negative_numbers:
+        raise ValueError("negative numbers not allowed " + ", ".join(negative_numbers))
     return s
