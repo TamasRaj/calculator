@@ -37,6 +37,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("\n10\n20\n30\n30\n45\n"), 135)
 
         self.assertEqual(calculator.add("//;\n1"), 1)
+        self.assertEqual(calculator.add("//&\n2"), 2)
+        self.assertEqual(calculator.add("//%\n4"), 4)
 
 if __name__ == '__main__':
     unittest.main()
