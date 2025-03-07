@@ -31,5 +31,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("\n10\n20\n30\n"), 60)
         self.assertEqual(calculator.add("\n10\n20\n\n30\n"), 60)
 
+        self.assertEqual(calculator.add("1\n2,3"), 6)
+
 if __name__ == '__main__':
     unittest.main()
