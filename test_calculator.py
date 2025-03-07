@@ -25,5 +25,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("5,7,9,,20"), 41)
         self.assertEqual(calculator.add(",10,,20,30,30,45,"), 135)
 
+        self.assertEqual(calculator.add("1\n2"), 3)
+        self.assertEqual(calculator.add("5\n7"), 12)
+        self.assertEqual(calculator.add("10\n20\n30"), 60)
+
 if __name__ == '__main__':
     unittest.main()
