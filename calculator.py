@@ -3,6 +3,8 @@ def add(numbers_str: str) -> int:
         return 0
 
     if "," not in numbers_str and "\n" not in numbers_str:
+        if int(numbers_str) < 0:
+            raise ValueError()
         return int(numbers_str)
     
     delimiter = ","
@@ -12,4 +14,13 @@ def add(numbers_str: str) -> int:
     
     numbers_str = numbers_str.replace("\n", delimiter)
     numbers = numbers_str.split(delimiter)
-    return sum([int(number) for number in numbers if number != ""])
+
+    s = 0
+    for number in numbers:
+        if number == "":
+            continue
+        if int(number) < 0:
+            raise ValueError()
+        s += int(number)
+
+    return s
