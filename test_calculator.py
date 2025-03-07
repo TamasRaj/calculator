@@ -40,5 +40,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add("//&\n2"), 2)
         self.assertEqual(calculator.add("//%\n4"), 4)
 
+        self.assertEqual(calculator.add("//;\n1;2"), 3)
+
 if __name__ == '__main__':
     unittest.main()
